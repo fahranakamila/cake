@@ -301,6 +301,19 @@
   hope life's treating you well
 </p>
       </div>
-      
+      <script>
+  const musik = document.getElementById('musikvalue');
+  musik.loop = true;
+
+  musik.play().catch(() => {
+    document.addEventListener('click', () => {
+      musik.play();
+    }, { once: true });
+
+    document.addEventListener('touchstart', () => {
+      musik.play();
+    }, { once: true });
+  });
+</script>
   </body>
 </html>
